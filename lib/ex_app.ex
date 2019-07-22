@@ -23,7 +23,7 @@ defmodule ExApp do
     |> send_resp(200, Jason.encode!(hello conn.body_params["name"]))
   end
 
-  defp hello(name), do: %{ message: "Hello #{name}!"}
+  defp hello(name), do: %{ message: "Hello #{name}"}
 
   match _ do
     send_resp(conn, 404, "Not found")
